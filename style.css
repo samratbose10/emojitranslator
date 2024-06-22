@@ -5,12 +5,20 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    animation: flicker 0.1s infinite;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
 }
 
 .container {
     text-align: center;
-    background: white;
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -44,7 +52,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-#outputText {
+#outputTextEncrypt, #outputTextDecrypt {
     margin-top: 20px;
     font-size: 1.2em;
     word-wrap: break-word;
